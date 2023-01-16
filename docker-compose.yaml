@@ -31,3 +31,11 @@ services:
             - "4442:4442"
             - "4443:4443"
             - "4444:4444"
+    test:
+        build:
+            dockerfile: Dockerfile
+            context: .
+        environment:
+            - "WDIO_AUTOMATION_PROTOCOL=webdriver"
+            - "WDIO_SERVER_HOSTNAME=selenium-hub"
+        command: "sleep infinity"
