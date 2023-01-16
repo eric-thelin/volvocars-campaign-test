@@ -5,7 +5,14 @@ export const config = {
 	// ====================
 	// WebdriverIO supports running e2e tests as well as unit and component tests.
 	runner: 'local',
-
+	automationProtocol: process.env.WDIO_AUTOMATION_PROTOCOL || 'devtools',
+	//
+	// =====================
+	// Server Configurations
+	// =====================
+	hostname: process.env.WDIO_SERVER_HOSTNAME || 'localhost',
+	port: Number.parseInt(process.env.WDIO_SERVER_PORT || 4444),
+	path: process.env.WDIO_SERVER_PATH || '/',
 	//
 	// ==================
 	// Specify Test Files
