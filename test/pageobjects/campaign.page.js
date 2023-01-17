@@ -15,8 +15,8 @@ class CampaignPage {
 		return await new Footer().transitionTo()
 	}
 
-	get heading() {
-		return $('h2');
+	async getHeadings() {
+		return Promise.all((await $$('h2')).map(h => h.getText()));
 	}
 }
 
