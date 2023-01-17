@@ -8,5 +8,7 @@ describe('Site Navigation', () => {
 		await expect(navigation.getHomePageLink()).toHaveAttribute(
 			'aria-label', 'Volvo Homepage'
 		);
+		await expect(navigation.getCarsLink()).toHaveText('Our Cars');
+		await expect(navigation.getMenuLink()).toHaveText('Menu');
 	})
 })
