@@ -4,3 +4,7 @@
 
 # NPM
 /node_modules
+
+# Allure
+/allure-results
+/allure-report
