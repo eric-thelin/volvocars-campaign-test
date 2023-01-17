@@ -1,6 +1,12 @@
+import SiteNavigation from './site-navigation.component.js'
 class CampaignPage {
-	open() {
-		return browser.url('intl/v/car-safety/a-million-more')
+	async open() {
+		await browser.url('intl/v/car-safety/a-million-more')
+		return this;
+	}
+
+	async getSiteNavigation() {
+		return await SiteNavigation.transitionTo()
 	}
 
 	get heading() {
