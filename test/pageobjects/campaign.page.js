@@ -6,7 +6,7 @@ class CampaignPage {
 	}
 
 	async getSiteNavigation() {
-		return await SiteNavigation.transitionTo()
+		return await new SiteNavigation().transitionTo()
 	}
 
 	get heading() {

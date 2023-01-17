@@ -1,20 +1,26 @@
 class SiteNavigation {
+	root;
+
+	constructor() {
+		this.root = $('#site-navigation');
+	}
+
 	async transitionTo() {
-		await expect($('#site-navigation')).toBeDisplayed();
+		await expect(this.root).toBeDisplayed();
 		return this;
 	}
 
 	getHomePageLink() {
-		return $('#site-navigation [data-autoid="nav:siteNavLogoSmall"]')
+		return this.root.$('[data-autoid="nav:siteNavLogoSmall"]')
 	}
 
 	getCarsLink() {
-		return $('#site-navigation [id="sitenav:topbar:cars"]')
+		return this.root.$('[id="sitenav:topbar:cars"]')
 	}
 
 	getMenuLink() {
-		return $('#site-navigation #sitenav-sidenav-toggle')
+		return this.root.$('#sitenav-sidenav-toggle')
 	}
 }
 
-export default new SiteNavigation()
+export default SiteNavigation
