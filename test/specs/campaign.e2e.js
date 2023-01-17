@@ -2,7 +2,7 @@ import CampaignPage from '../pageobjects/campaign.page.js'
 
 describe('Campaign', () => {
 	it('should have expected content', async () => {
-		await CampaignPage.open()
+		await CampaignPage.open();
 
 		expect(await CampaignPage.getHeadings()).toEqual([
 			'Ideas that change the world are often the most controversial.',
@@ -10,6 +10,6 @@ describe('Campaign', () => {
 			'Decades of innovation',
 			'Explore our models',
 			'',
-		])
+		]);
 	})
 })

@@ -11,9 +11,9 @@ describe('Footer', () => {
 			'Privacy',
 			'Social Media',
 			'Tell Us'
-		])
+		]);
 		expect(await footer.getCopyrightText()).toContain(
 			new Date().getFullYear().toString()
-		)
+		);
 	})
 })

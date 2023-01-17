@@ -11,16 +11,16 @@ class SiteNavigation {
 	}
 
 	getHomePageLink() {
-		return this.root.$('[data-autoid="nav:siteNavLogoSmall"]')
+		return this.root.$('[data-autoid="nav:siteNavLogoSmall"]');
 	}
 
 	getCarsLink() {
-		return this.root.$('[id="sitenav:topbar:cars"]')
+		return this.root.$('[id="sitenav:topbar:cars"]');
 	}
 
 	getMenuLink() {
-		return this.root.$('#sitenav-sidenav-toggle')
+		return this.root.$('#sitenav-sidenav-toggle');
 	}
 }
 
-export default SiteNavigation
+export default SiteNavigation;
