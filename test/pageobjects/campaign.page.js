@@ -21,7 +21,7 @@ class CampaignPage {
 	}
 
 	async getHeadings() {
-		return Promise.all((await $$('h2')).map(h => h.getText()));
+		return await $$('h2').map(h => h.getText());
 	}
 }
 

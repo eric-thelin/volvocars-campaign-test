@@ -11,13 +11,13 @@ class Footer {
 	}
 
 	async getLinkTexts() {
-		let links = await this.root.$$('[data-autoid="footer:links"]');
-		return Promise.all(links.map(link => link.getText()));
+		let links = this.root.$$('[data-autoid="footer:links"]');
+		return await links.map(link => link.getText());
 	}
 
 	async getCopyrightText() {
-		let copyright = await this.root.$('[data-autoid="footer:copyright"]');
-		return copyright.getText();
+		let copyright = this.root.$('[data-autoid="footer:copyright"]');
+		return await copyright.getText();
 	}
 }
 
