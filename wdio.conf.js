@@ -1,3 +1,5 @@
+import video from "wdio-video-reporter";
+
 export const config = {
 	//
 	// ====================
@@ -144,10 +146,14 @@ export const config = {
 	// see also: https://webdriver.io/docs/dot-reporter
 	reporters: [
 		'spec',
+		[video, {
+			saveAllVideos: false,       // If true, also saves videos for successful test cases
+			videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+		}],
 		['allure', {
 			outputDir: 'allure-results',
 			disableWebdriverStepsReporting: true,
-			disableWebdriverScreenshotsReporting: false,
+			disableWebdriverScreenshotsReporting: true,
 		}]
 	],
 
@@ -253,11 +259,8 @@ export const config = {
 	 * @param {Boolean} result.passed    true if test has passed, otherwise false
 	 * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
 	 */
-	afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-		if (error) {
-			await browser.takeScreenshot();
-		}
-	},
+	// afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+	// },
 
 	/**
 	 * Hook that gets executed after the suite has ended

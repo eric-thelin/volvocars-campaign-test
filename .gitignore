@@ -8,3 +8,6 @@
 # Allure
 /allure-results
 /allure-report
+
+# Video reporter
+/_results_
