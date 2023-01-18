@@ -1,1 +1,18 @@
+# IntelliJ
+/.idea/
+/*.iml
+
+# NPM
 /node_modules
+
+# Allure
+/allure-results
+/allure-report
+
+# Video reporter
+/_results_
+
+# Image comparison service
+/.tmp
+# Keep this directory to preserve the baseline images
+# /wic
