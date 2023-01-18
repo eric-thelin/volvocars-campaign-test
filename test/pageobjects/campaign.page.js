@@ -4,12 +4,12 @@ import Footer from './footer.component.js'
 class CampaignPage {
 	async open() {
 		await browser.url('intl/v/car-safety/a-million-more');
-		await this.transitionTo();
-		return this;
+		return await this.transitionTo();
 	}
 
 	async transitionTo() {
 		await expect(browser).toHaveTitle('A million more | Volvo Cars - International');
+		return this;
 	}
 
 	async getSiteNavigation() {
