@@ -54,7 +54,7 @@ export const config = {
 	// and 30 processes will get spawned. The property handles how many capabilities
 	// from the same test should run tests.
 	//
-	maxInstances: 2,
+	maxInstances: 6,
 	//
 	// If you have trouble getting all important capabilities together, check out the
 	// Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -65,7 +65,7 @@ export const config = {
 		// maxInstances can get overwritten per capability. So if you have an in-house Selenium
 		// grid with only 5 firefox instances available you can make sure that not more than
 		// 5 instances get started at a time.
-		maxInstances: 1,
+		maxInstances: 3,
 		//
 		browserName: 'chrome',
 		// If outputDir is provided WebdriverIO can capture driver session logs
@@ -73,6 +73,7 @@ export const config = {
 		// excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
 		// excludeDriverLogs: ['bugreport', 'server'],
 	}, {
+		maxInstances: 3,
 		browserName: 'firefox',
 	}],
 	//
