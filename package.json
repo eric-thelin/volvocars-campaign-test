@@ -10,6 +10,7 @@
 		"allure-commandline": "^2.20.1",
 		"chromedriver": "^109.0.0",
 		"wdio-chromedriver-service": "^8.0.1",
+		"wdio-image-comparison-service": "^5.0.2",
 		"wdio-video-reporter": "^3.4.0"
 	},
 	"scripts": {

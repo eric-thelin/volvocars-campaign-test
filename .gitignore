@@ -11,3 +11,7 @@
 
 # Video reporter
 /_results_
+
+# Image comparison service
+/.tmp
+/wic
