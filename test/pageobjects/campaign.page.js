@@ -12,6 +12,13 @@ class CampaignPage {
 		return this;
 	}
 
+	async acceptCookies() {
+		let acceptCookiesButton = $('#onetrust-accept-btn-handler');
+		await acceptCookiesButton.click();
+		await expect(acceptCookiesButton).not.toBeDisplayed()
+		return this;
+	}
+
 	async getSiteNavigation() {
 		return await new SiteNavigation().transitionTo();
 	}
