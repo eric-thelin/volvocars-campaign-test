@@ -35,7 +35,18 @@ services:
         build:
             dockerfile: Dockerfile
             context: .
+        volumes:
+            - ./allure-results:/app/allure-results
         environment:
             - "WDIO_AUTOMATION_PROTOCOL=webdriver"
             - "WDIO_SERVER_HOSTNAME=selenium-hub"
         command: "sleep infinity"
+
+    allure:
+        image: pradapjackie/allure-reports-generation:1.0
+        volumes:
+            - ./allure-results:/app/allure-results
+            - ./allure-report:/app/allure-report
+        ports:
+            - "8080:8080"
+        command: "bash -c 'allure generate --clean /app/allure-results && allure open --port 8080 /app/allure-report'"
