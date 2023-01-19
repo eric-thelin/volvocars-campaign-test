@@ -41,6 +41,7 @@ services:
             context: .
         volumes:
             - ./allure-results:/app/allure-results
+            - ./tmp:/app/.tmp
         environment:
             - "WDIO_AUTOMATION_PROTOCOL=webdriver"
             - "WDIO_SERVER_HOSTNAME=selenium-hub"
