@@ -144,6 +144,11 @@ docker-compose down
 docker-compose up -d --build
 ```
 
+**Note:**
+The `--build` flag is also need whenever you want to update the test Docker
+image after modifying any of the source code, including test sources,
+configuration and npm dependencies.
+
 ## Final thoughts
 
 I noticed a strange thing when accessing the campaign page from the automated
